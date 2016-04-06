@@ -1,3 +1,8 @@
-body {
-	
+#chart {
+	font-family: 'Merriweather';
+	text-align: center;
+}
+
+#chart-title {
+	font-weight: 300;
 }
