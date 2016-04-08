@@ -11,10 +11,19 @@
 		
 	</head>
 	<body style="margin: 0; padding: 0;">
+		<div id="tooltip" class="hidden">
+			<div>
+				<span id='month'>November</span> <span id='year'>1986</span>
+			</div>
+			<div><span id="temperature">10</span> °C</div>
+			<div><span id="delta">-2.4</span> °C</div>
+		</div>
 		
 		<div id="chart">
 			<h1 id="chart-title">Monthly Global Land-Surface Temperatures</h1>
+
 		</div>
+		<div id="legend"><span id='min'>0</span><span id='max'>13</span><div>
 		
 		<!-- Link to Webpack bundle -->
 		<script src="bundle.js"></script>

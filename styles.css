@@ -6,3 +6,51 @@
 #chart-title {
 	font-weight: 300;
 }
+
+#legend {
+	position: relative;
+	margin-left: 1050px;
+	margin-top: 20px;
+	font-family: sans-serif;
+}
+
+#min {
+	position: absolute;
+	top: 20px;
+	left: 37px;
+}
+
+#max {
+	position: absolute;
+	top: 20px;
+	right: 214px;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: cripsEdges;
+}
+
+.axis text {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+#tooltip {
+	position: absolute;
+	z-index: 1;
+	background-color: hsla(0, 0%, 0%, 0.8);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	color: aliceblue;
+	width: 150px;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
