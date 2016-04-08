@@ -66,7 +66,7 @@ function plotData(jsonData) {
 				
 	svg.append('g')
 		.attr('class', 'x axis')
-		.attr('transform', `translate(0, ${h})`)
+		.attr('transform', `translate(0, ${h - 4})`)
 		.call(xAxis);
 		
 	svg.append('g')
@@ -111,7 +111,7 @@ function plotData(jsonData) {
 		.on('mouseout', () => d3.select('#tooltip').classed('hidden', true));
 		
 	// Legend
-	let legendData =  d3.range(baseTemp + d3.max(dataset, d => d['variance']));
+	let legendData =  d3.range(15);
 	let legendCellWidth = 30;
 	d3.select('#legend')
 		.append('svg')
@@ -130,17 +130,17 @@ function plotData(jsonData) {
 function getCellColor(avgMonthTemp) {
 	let coldTemp = 260;
 	let skipPoint = 180;
-	let skipAmount = 90;
+	let skipAmount = 95;
 	let hotTemp = 0;
-	let maxDataTemp = 13;
+	let maxDataTemp = 14;
 	
 	let heatRatio = avgMonthTemp / maxDataTemp; // The higher the avgTemp the higher the ratio
 	let colorTemp = Math.floor(coldTemp - ((coldTemp - (skipPoint - skipAmount)) * heatRatio));
 	let alpha = 1;
 	if (colorTemp < skipPoint && colorTemp > (skipPoint - skipAmount)) {
 		colorTemp -= skipAmount;
+		if (colorTemp < 0) colorTemp = 0;
 	}
-	
 	if (colorTemp > 120 && colorTemp < 200) {
 		alpha = 0.9;
 	}

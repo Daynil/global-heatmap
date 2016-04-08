@@ -9,7 +9,7 @@
 
 #legend {
 	position: relative;
-	margin-left: 1050px;
+	margin-left: 1010px;
 	margin-top: 20px;
 	font-family: sans-serif;
 }
@@ -23,7 +23,7 @@
 #max {
 	position: absolute;
 	top: 20px;
-	right: 214px;
+	right: 223px;
 }
 
 .axis path,
@@ -31,6 +31,10 @@
 	fill: none;
 	stroke: black;
 	shape-rendering: cripsEdges;
+}
+
+.y.axis line, .y.axis path {
+	stroke: white;
 }
 
 .axis text {
